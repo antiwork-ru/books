@@ -602,8 +602,8 @@
             const done = books.filter(b => b.status === "done").length, wip = books.filter(b => b.status === "wip").length, edit = books.filter(b => b.status === "edit").length;
             document.getElementById("ws").innerHTML = `
     <div class="w-stat"><div class="n">${books.length}</div><div class="l">всего книг</div></div>
-    <div class="w-stat"><div class="n">${done + edit}</div><div class="l">готово</div></div>
-    <div class="w-stat"><div class="n">${wip}</div><div class="l">в работе</div></div>
+    <div class="w-stat"><div class="n">${done}</div><div class="l">готово</div></div>
+    <div class="w-stat"><div class="n">${wip + edit}</div><div class="l">в работе</div></div>
     <div class="w-stat"><div class="n">${f.length}</div><div class="l">показано</div></div>`;
           };
           document.getElementById("wtags").innerHTML = allTags.map(t => `<button class="w-tag" data-t="${t}" onclick="wTT('${t}')">${t}</button>`).join("");
