@@ -233,8 +233,8 @@
     }
 
     .tg-link img {
-      width: 48px;
-      height: 48px;
+      width: 64px;
+      height: 64px;
       border-radius: 50%;
     }
   </style>
@@ -251,8 +251,7 @@
 
       <!-- ИКОНКА КАНАЛА -->
       <a class="tg-link" href="https://t.me/antiwork_ru" target="_blank" rel="noopener">
-        <img src="icons/channel.jpg" alt="Telegram">
-        <span>телеграм-канал</span>
+        <img src="icons/logo.jpg" alt="Telegram">
       </a>
     </div>
   </header>
@@ -767,8 +766,38 @@
 
   </main>
 
-  <footer>
-    2026 · антитруд.
+
+
+  <!-- Улучшенный футер (замени текущий <footer>) -->
+  <footer
+    style="background: linear-gradient(135deg, #f6f7fb 0%, #ffffff 100%); border-top: 1px solid #e6e9ef; padding: 48px 16px 32px; text-align: center; font-family: system-ui, -apple-system, sans-serif;">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      <div
+        style="background: rgba(11, 99, 255, 0.05); border: 1px solid rgba(11, 99, 255, 0.1); border-radius: 16px; padding: 32px 24px; margin-bottom: 24px;">
+        <h3 style="font-size: 24px; font-weight: 700; color: #111; margin: 0 0 12px 0; line-height: 1.2;">Не пропусти
+          новые книги</h3>
+        <p style="font-size: 16px; color: #666; margin: 0 0 24px 0; line-height: 1.5;">Подпишись на канал: свежие
+          переводы, статьи и обсуждения антитруда.</p>
+        <a href="https://t.me/antiwork_ru" target="_blank" rel="noopener" class="subscribe-btn" style="
+        display: inline-block; 
+        padding: 14px 32px;
+        margin-right: 10px;
+        margin-top: -10px; 
+        background: linear-gradient(135deg, #0b63ff 0%, #1e5fff 100%); 
+        color: white; 
+        font-size: 16px; 
+        font-weight: 600; 
+        text-decoration: none; 
+        border-radius: 12px; 
+        box-shadow: 0 8px 24px rgba(11, 99, 255, 0.3); 
+        transition: all 0.2s ease;
+      " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 12px 32px rgba(11, 99, 255, 0.4)';"
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 24px rgba(11, 99, 255, 0.3)';">
+          Подписаться на Telegram →
+        </a>
+      </div>
+      <p style="font-size: 13px; color: #666; margin: 0;"> 2026. антитруд.</p>
+    </div>
   </footer>
 
   <script>
