@@ -236,6 +236,47 @@
       height: 64px;
       border-radius: 50%;
     }
+
+    /* SCROLL PROGRESS */
+    #scroll-progress {
+      position: fixed;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 160px;
+      background: rgba(0, 0, 0, 0.06);
+      border-radius: 999px;
+      overflow: hidden;
+      z-index: 9999;
+    }
+
+    #scroll-progress::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: var(--scroll-height, 0%);
+      background: linear-gradient(to top,
+          #ff0000,
+          #000000);
+      border-radius: 999px;
+      transition: height 0.08s linear;
+    }
+
+    /* мобильные */
+    @media (max-width: 720px) {
+      #scroll-progress {
+        left: 4px;
+        height: 90px;
+        width: 3px;
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 
 </head>
@@ -801,6 +842,12 @@
         flex-direction: column
       }
 
+      .w-card:hover {
+        transform: scale(1.05) translateY(-2px);
+        z-index: 2;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      }
+
       .w-cover {
         width: 100%;
         aspect-ratio: 2/3;
@@ -1100,6 +1147,7 @@
         background: #f0efe9
       }
 
+
       .aa-b {
         padding: .85rem;
         display: flex;
@@ -1328,7 +1376,31 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+
+      function updateScrollProgress() {
+        const scrollTop = window.scrollY;
+        const docHeight = root.scrollHeight - window.innerHeight;
+
+        const progress = docHeight > 0
+          ? (scrollTop / docHeight) * 100
+          : 0;
+
+        document
+          .getElementById("scroll-progress")
+          .style.setProperty("--scroll-height", progress + "%");
+      }
+
+      window.addEventListener("scroll", updateScrollProgress);
+      updateScrollProgress();
+    })();
+  </script>
 </body>
+
+<div id="scroll-progress"></div>
 
 
 </html>
