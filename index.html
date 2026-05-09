@@ -237,41 +237,17 @@
       border-radius: 50%;
     }
 
-    /* SCROLL PROGRESS */
-    #scroll-progress {
+    .manifesto-strip {
       position: fixed;
       left: 18px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 4px;
-      height: 160px;
-      background: rgba(0, 0, 0, 0.06);
-      border-radius: 999px;
-      overflow: hidden;
-      z-index: 9999;
-    }
-
-    #scroll-progress::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: var(--scroll-height, 0%);
-      background: linear-gradient(to top,
-          #ff0000,
-          #000000);
-      border-radius: 999px;
-      transition: height 0.08s linear;
-    }
-
-    /* мобильные */
-    @media (max-width: 720px) {
-      #scroll-progress {
-        left: 4px;
-        height: 90px;
-        width: 3px;
-      }
+      bottom: 40px;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      color: #c2c2c2;
+      text-transform: uppercase;
+      z-index: 50;
     }
 
     html {
@@ -541,7 +517,7 @@
       }
     </style>
 
-    <div class="hero-row">
+    <div class="hero-row" id="hero">
 
       <div class="hero">
         <p class="hero-label">Независимый проект</p>
@@ -687,7 +663,7 @@
       }
     </style>
 
-    <section>
+    <section id="start">
       <h2>С чего начать?</h2>
 
       <p class="start-intro">Если вы только знакомитесь с темой антитруда – вот три книги, с которых удобно начать:
@@ -1236,7 +1212,7 @@
       }
     </style>
 
-    <div class="aa">
+    <div class="aa" id="articles">
       <p class="aa-h">Статьи и публикации</p>
       <div class="aa-g" id="aag"></div>
     </div>
@@ -1378,29 +1354,37 @@
   </footer>
 
   <script>
-    (function () {
-      const root = document.documentElement;
+    const manifestos = [
+      "РАБОТА НЕ ЖИЗНЬ",
+      "ОТКАЖИ НОРМАЛЬНОМУ",
+      "ОТДЫХ НЕ НАГРАДА",
+      "ТЫ НЕ РЕСУРС",
+      "ОТДЫХ – ЭТО СОПРОТИВЛЕНИЕ",
+      "НИКТО НЕ ВЛАДЕЕТ ТВОИМ ВРЕМЕНЕМ",
+      "ПРИТОРМОЗИ СИСТЕМУ",
+      "АНТИТРУД / ПРОЛАЙФ",
+      "ТВОЯ ЦЕННОСТЬ НЕ ТВОИ РЕЗУЛЬТАТЫ",
+      "ЧЕЛОВЕК ВАЖНЕЕ РЫНКА",
+      "УСТАЛОСТЬ – ПОЛИТИЧЕСКИЙ ВОПРОС",
+      "БАЗОВЫЙ ДОХОД – СВОБОДА СКАЗАТЬ НЕТ",
+      "АВТОМАТИЗАЦИЯ ДОЛЖНА ОСВОБОЖДАТЬ",
+      "КУЛЬТ ЖИЗНИ",
+      "РАБОТА МЕЧТЫ ВСЁ ЕЩЁ РАБОТА"
+    ];
 
-      function updateScrollProgress() {
-        const scrollTop = window.scrollY;
-        const docHeight = root.scrollHeight - window.innerHeight;
+    function setRandomManifesto() {
+      const el = document.getElementById("manifesto");
+      const randomIndex = Math.floor(Math.random() * manifestos.length);
+      el.textContent = manifestos[randomIndex];
+    }
 
-        const progress = docHeight > 0
-          ? (scrollTop / docHeight) * 100
-          : 0;
-
-        document
-          .getElementById("scroll-progress")
-          .style.setProperty("--scroll-height", progress + "%");
-      }
-
-      window.addEventListener("scroll", updateScrollProgress);
-      updateScrollProgress();
-    })();
+    document.addEventListener("DOMContentLoaded", setRandomManifesto);
   </script>
 </body>
 
-<div id="scroll-progress"></div>
+<div class="manifesto-strip" id="manifesto">
+  РАБОТА НЕ ЖИЗНЬ
+</div>
 
 
 </html>
