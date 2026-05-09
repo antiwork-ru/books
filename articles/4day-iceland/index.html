@@ -1,0 +1,925 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <link rel="icon" type="image/png" href="../../icons/favicon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- ═══════════════════════════════════════════════════════════
+       ШАБЛОН: мета-данные для каждой новой статьи
+  ═══════════════════════════════════════════════════════════ -->
+    <title>Результаты внедрения 4-дневной рабочей недели в Исландии – антитруд.</title>
+    <meta name="description"
+        content="Данные и выводы крупнейшего эксперимента по сокращению рабочей недели – что изменилось для работников и работодателей.">
+    <link rel="canonical" href="https://antiwork-ru.github.io/books/articles/4day-iceland/">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Результаты внедрения 4-дневной рабочей недели в Исландии – антитруд.">
+    <meta property="og:description"
+        content="Данные и выводы крупнейшего эксперимента по сокращению рабочей недели – что изменилось для работников и работодателей.">
+    <meta property="og:url" content="https://antiwork-ru.github.io/books/articles/4day-iceland/">
+    <meta property="og:image" content="https://img2.teletype.in/files/18/c1/18c1b3eb-532c-4402-bdb1-652df0a675e4.png">
+
+    <meta name="twitter:card" content="atricle">
+    <meta name="twitter:title" content="Результаты внедрения 4-дневной рабочей недели в Исландии – антитруд.">
+    <meta name="twitter:description"
+        content="Данные и выводы крупнейшего эксперимента по сокращению рабочей недели – что изменилось для работников и работодателей.">
+    <meta name="twitter:image" content="https://img2.teletype.in/files/18/c1/18c1b3eb-532c-4402-bdb1-652df0a675e4.png">
+    <!-- ═══════════════════════════════════════════════════════════ -->
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            margin: 0;
+            background: #f6f7fb;
+            color: #111;
+        }
+
+        /* ── HEADER ── */
+        header {
+            background: #fff;
+            border-bottom: 1px solid #e6e9ef;
+            padding: 20px 0;
+        }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-red {
+            color: #ff0000;
+            font-weight: 700;
+        }
+
+        .brand-black {
+            color: #000000;
+            font-weight: 700;
+        }
+
+        .brand-sub {
+            color: #666;
+            font-weight: 600;
+            margin-left: -4px;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .tg-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .tg-link img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+        }
+
+        /* ── BREADCRUMB ── */
+        .breadcrumb {
+            max-width: 760px;
+            margin: 20px auto 0;
+            padding: 0 16px;
+            font-size: 13px;
+            color: #999;
+        }
+
+        .breadcrumb a {
+            color: #999;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: #ff0000;
+        }
+
+        .breadcrumb span {
+            margin: 0 6px;
+        }
+
+        /* ── ARTICLE WRAP ── */
+        .article-wrap {
+            max-width: 760px;
+            margin: 24px auto 60px;
+            padding: 0 16px;
+        }
+
+        /* ── ARTICLE HEADER ── */
+        .art-header {
+            background: #fff;
+            border: 1px solid #e6e9ef;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 24px;
+            padding: 0 !important;
+            /* Убираем тот самый padding: 20px 0 */
+        }
+
+        .art-cover {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            display: block;
+            background: #f0efe9;
+        }
+
+        .art-header-body {
+            padding: 28px 32px 26px;
+            position: relative;
+        }
+
+        .art-header-body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #ff0000;
+        }
+
+        .art-meta-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 14px;
+        }
+
+        .art-badge {
+            font-size: 10px;
+            padding: 3px 10px;
+            border-radius: 99px;
+            font-weight: 700;
+            letter-spacing: .03em;
+        }
+
+        .badge-a {
+            background: #E6F1FB;
+            color: #0C447C;
+        }
+
+        .badge-r {
+            background: #EAF3DE;
+            color: #27500A;
+        }
+
+        .badge-p {
+            background: #FAEEDA;
+            color: #633806;
+        }
+
+        .badge-l {
+            background: #EEEDFE;
+            color: #3C3489;
+        }
+
+        .badge-i {
+            background: #FFE8E8;
+            color: #8B0000;
+        }
+
+        .art-meta-date {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .art-meta-src {
+            font-size: 12px;
+            color: #bbb;
+        }
+
+        .art-title-h {
+            font-size: clamp(20px, 3vw, 28px);
+            font-weight: 800;
+            line-height: 1.25;
+            margin: 0 0 14px;
+            color: #111;
+        }
+
+        .art-subtitle {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            margin: 0 0 18px;
+        }
+
+        .art-info-row {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            padding-top: 16px;
+            border-top: 1px solid #f0f0f0;
+            font-size: 13px;
+            color: #888;
+        }
+
+        .art-info-row strong {
+            color: #333;
+        }
+
+        .art-info-row a {
+            color: #ff0000;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .art-info-row a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── ARTICLE BODY ── */
+        .art-body {
+            background: #fff;
+            border: 1px solid #e6e9ef;
+            border-radius: 16px;
+            padding: 36px 40px;
+            margin-bottom: 24px;
+            line-height: 1.78;
+            font-size: 16px;
+            color: #222;
+        }
+
+        @media (max-width: 600px) {
+            .art-body {
+                padding: 24px 20px;
+            }
+
+            .art-header-body {
+                padding: 20px;
+            }
+        }
+
+        /* Типографика внутри статьи */
+        .art-body h2 {
+            font-size: 20px;
+            font-weight: 800;
+            color: #111;
+            margin: 2em 0 .6em;
+            padding-bottom: .3em;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .art-body h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: #222;
+            margin: 1.6em 0 .5em;
+        }
+
+        .art-body p {
+            margin: 0 0 1.1em;
+        }
+
+        .art-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .art-body a {
+            color: #ff0000;
+            text-decoration: none;
+        }
+
+        .art-body a:hover {
+            text-decoration: underline;
+        }
+
+        .art-body strong {
+            font-weight: 700;
+            color: #111;
+        }
+
+        .art-body em {
+            font-style: italic;
+        }
+
+        /* Цитата */
+        .art-body blockquote {
+            margin: 1.4em 0;
+            padding: 16px 20px 16px 24px;
+            background: #f6f7fb;
+            border-left: 4px solid #ff0000;
+            border-radius: 0 8px 8px 0;
+            font-size: 15px;
+            color: #333;
+            font-style: italic;
+        }
+
+        .art-body blockquote cite {
+            display: block;
+            margin-top: 8px;
+            font-size: 12px;
+            color: #888;
+            font-style: normal;
+        }
+
+        /* Список */
+        .art-body ul,
+        .art-body ol {
+            padding-left: 24px;
+            margin: 0 0 1.1em;
+        }
+
+        .art-body li {
+            margin-bottom: .4em;
+        }
+
+        /* Примечание / врезка */
+        .art-note {
+            background: #fffbe6;
+            border: 1px solid #f5e272;
+            border-radius: 8px;
+            padding: 14px 18px;
+            font-size: 14px;
+            color: #555;
+            margin: 1.4em 0;
+        }
+
+        .art-note strong {
+            color: #333;
+        }
+
+        /* Горизонтальный разделитель */
+        .art-body hr {
+            border: none;
+            border-top: 2px solid #f0f0f0;
+            margin: 2em 0;
+        }
+
+        /* ── ИСТОЧНИК / ССЫЛКА ── */
+        .source-box {
+            background: #fff;
+            border: 1px solid #e6e9ef;
+            border-radius: 12px;
+            padding: 18px 24px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .source-box p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+            flex: 1;
+        }
+
+        .source-box strong {
+            color: #111;
+        }
+
+        .source-btn {
+            display: inline-block;
+            padding: 9px 20px;
+            border-radius: 9px;
+            background: #111;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background .15s;
+        }
+
+        .source-btn:hover {
+            background: #ff0000;
+        }
+
+        /* ── RELATED ── */
+        .related-section {
+            margin-bottom: 40px;
+        }
+
+        .related-label {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 14px;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 14px;
+        }
+
+        .rel-card {
+            background: #fff;
+            border: 1px solid #e8e8e8;
+            border-radius: 10px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            transition: box-shadow .15s, transform .15s;
+        }
+
+        .rel-card:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, .09);
+            transform: translateY(-2px);
+        }
+
+        .rel-img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            background: #f0efe9;
+            display: block;
+        }
+
+        .rel-body {
+            padding: .75rem;
+        }
+
+        .rel-title {
+            font-size: 13px;
+            font-weight: 700;
+            margin: 0 0 4px;
+            color: #111;
+            line-height: 1.3;
+        }
+
+        .rel-meta {
+            font-size: 11px;
+            color: #999;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: #fff;
+            border-top: 1px solid #e5e7eb;
+            padding: 40px 16px 24px;
+        }
+
+        footer .fi {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        footer .ft {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #eef2f7;
+        }
+
+        footer .fb-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: #ff0000;
+            margin-bottom: 10px;
+            letter-spacing: .02em;
+            text-transform: uppercase;
+        }
+
+        footer h3 {
+            font-size: 24px;
+            line-height: 1.2;
+            margin: 0 0 10px;
+        }
+
+        footer p1 {
+            margin: 0;
+            color: #6b7280;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .tg-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 20px;
+            border-radius: 12px;
+            background: #ff0000;
+            color: #fff;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            border: 1px solid #ff0000;
+            transition: background .2s, transform .2s;
+        }
+
+        .tg-btn:hover {
+            background: #000;
+            border: #000;
+            transform: translateY(-1px);
+        }
+
+        .yt-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            padding: 18px 0 16px;
+            border-bottom: 1px solid #eef2f7;
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        .yt-row a {
+            color: #ff0000;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .copy {
+            padding-top: 16px;
+            color: #9ca3af;
+            font-size: 13px;
+        }
+
+        .caption {
+            font-size: 11px;
+            color: #666;
+            /* заодно можно сделать текст чуть светлее */
+        }
+
+        /* ── MANIFESTO ── */
+        .manifesto-strip {
+            position: fixed;
+            left: 18px;
+            bottom: 40px;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-size: 10px;
+            letter-spacing: .25em;
+            color: #c2c2c2;
+            text-transform: uppercase;
+            z-index: 50;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-inner">
+            <h1>
+                <a href="../../" style="text-decoration:none;">
+                    <span class="brand-red">анти</span><span class="brand-black">труд.</span>
+                    <span class="brand-sub">переводы</span>
+                </a>
+            </h1>
+            <a class="tg-link" href="https://t.me/antiwork_ru" target="_blank" rel="noopener">
+                <img src="../../icons/logo.jpg" alt="Telegram">
+            </a>
+        </div>
+    </header>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../../">Главная</a>
+        <span>›</span>
+        <a href="../">Статьи</a>
+        <span>›</span>
+        <span>Результаты внедрения 4-дневной рабочей недели в Исландии</span>
+    </nav>
+
+    <div class="article-wrap">
+
+        <!-- ══════════════════════════════════════════════════════════
+         ШАПКА СТАТЬИ
+    ══════════════════════════════════════════════════════════ -->
+        <header class="art-header">
+            <img class="art-cover" src="https://img2.teletype.in/files/18/c1/18c1b3eb-532c-4402-bdb1-652df0a675e4.png"
+                alt="Заголовок статьи" loading="eager">
+            <div class="art-header-body">
+                <div class="art-meta-row">
+                    <!-- Тип: badge-a статья | badge-r доклад | badge-p подкаст | badge-l письмо | badge-i интервью -->
+                    <span class="art-badge badge-a">Статья</span>
+                    <span class="art-meta-date">октябрь 2024</span>
+                    <span class="art-meta-src">· антитруд.</span>
+                </div>
+
+                <!-- Заголовок -->
+                <h2 class="art-title-h">
+                    Результаты внедрения 4-дневной рабочей недели в Исландии
+                </h2>
+
+                <!-- Подзаголовок / лид -->
+                <p class="art-subtitle">
+                    Данные и выводы крупнейшего эксперимента по сокращению рабочей недели: что изменилось для
+                    работников и работодателей.
+                </p>
+
+                <div class="art-info-row">
+                    <div><strong>Автор:</strong> антитруд.</div>
+                    <!-- <div><strong>Перевёл:</strong> <a href="https://t.me/antiwork_ru">антитруд.</a></div>
+                    <div><strong>Оригинал:</strong> <a href="#">Читать на языке оригинала →</a></div> -->
+                </div>
+            </div>
+        </header>
+        <!-- ══════════════════════════════════════════════════════════ -->
+
+
+        <!-- ══════════════════════════════════════════════════════════
+         ТЕЛО СТАТЬИ
+    ══════════════════════════════════════════════════════════ -->
+        <article class="art-body">
+
+            <p>
+                Теперь давайте медленно и вкрадчиво посмотрим на результаты внедрения 4-дневной рабочей недели в
+                Исландии.
+            </p>
+
+            <h2>Как всё развивалось?</h2>
+
+            <p>
+                В период с 2015 по 2019 годы в Исландии – стране, традиционно работающей больше своих скандинавских
+                соседей, - была проведена серия экспериментов по сокращению рабочей недели с сохранением заработной
+                платы, в которой приняли участие около 2500 работников, преимущественно из государственного сектора.
+
+            <p></p>В 2021 году на свет было выпущено исследование, в котором был проведен анализ эксперимента – его
+            результаты были охарактеризованы как имеющие <em>«ошеломляющий успех»</em> (ошеломи меня, моя Эсмеральда!).
+            Это
+            послужило отправной точкой для проведения дальнейшей серии пилотных экспериментов в Великобритании, США,
+            Южной Африке и ряде других стран.
+
+            <p></p>Помимо этого, результаты исландского эксперимента послужили серьезным аргументом для местных
+            профсоюзов,
+            которые
+            <!-- Цитата из текста -->
+            <blockquote>
+                добились для десятков тысяч работников по всей стране - 86 % всего трудоспособного населения
+                Исландии - права на сокращение рабочего времени. [Таким образом, Исландия в настоящее время]
+                единственная европейская страна, успешно сократившая рабочее время в крупном национальном масштабе за
+                последнее десятилетие… преимущественно в государственном секторе.
+                <cite>– <a href="https://autonomy.work/wp-content/uploads/2024/10/Iceland_-1.pdf">Авторы доклада Alda /
+                        Autonomy</a></cite>
+
+            </blockquote>
+
+
+
+            <p></p>Какие цели стояли за сокращением рабочего времени?
+
+            <p></p>1. Улучшение баланса между работой и личной жизнью для работников и их семей.
+
+            <p></p>2. Обеспечение более справедливого распределения рабочего времени между женщинами и мужчинами на
+            оплачиваемой работе и дома.
+
+            <p></p>3. Сокращение разницы в часах, которые обычно работают в Исландии по сравнению с другими
+            скандинавскими
+            странами.
+
+            <p></p>Новое исследование анализирует долгосрочное влияние сокращения рабочей недели на работников,
+            экономику и
+            рынок труда методом опроса, в котором приняли участие 9000 человек.
+            </p>
+
+
+
+            <h3>Что мы имеем?</h3>
+
+            <p>
+                Как я уже отмечал ранее, Исландия – трудящаяся страна по меркам своих европейских соседей, и это важно.
+                Проведенная реформа позволила снизить количество рабочих часов в неделю до отметки в 36.2 ч, доведя их
+                до среднеевропейского уровня, равного 36.1 ч (рисунок 1). Иначе говоря, пример Исландии можно
+                охарактеризовать не только термином <em>«ошеломляющий успех»</em>, но также и более нейтральными
+                <em>«нормализация»</em>,
+                <em>«оптимизация»</em>.
+            </p>
+
+            <img src="https://img1.teletype.in/files/8f/9a/8f9a43e0-5b55-4510-831b-ee0603e45924.png"
+                alt="Среднее число рабочих часов в неделю по основной занятости, 2023"
+                style="display: block; margin: 0 auto; margin-top: 20px; margin-bottom: 20px; width: 70%;">
+
+            <p style="font-size: 12px; color: #555;">
+                <em>Рисунок 1. <a href="https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20240530-1"
+                        style="color: inherit; text-decoration: none;">Источник</a></em>
+            </p>
+
+            Оценочные термины затуманивают взор и отвлекают от сущностных процессов, которые происходили и происходят в
+            Исландии. Количество часов – это не что-то новое; что-то новое – это то, как в традиционно трудящейся стране
+            смогли провернуть такую вещь. Впрочем, к проворотам и выворотам мы еще вернемся; а я бы хотел задержать свое
+            внимание на следующем графике, демонстрирующем распределение рабочих часов работников Исландии (рисунок 2).
+            <p></p>
+            <img src="https://img3.teletype.in/files/2a/f3/2af3d88f-be65-445d-8a9d-1e3c69caa81f.png"
+                alt="Распределение рабочих часов работников Исландии"
+                style="display: block; margin: 0 auto; width: 70%; margin-top: 20px;">
+
+            <p style="font-size: 12px; color: #555;">
+                <em>Рисунок 2. <a href="https://autonomy.work/wp-content/uploads/2024/10/Iceland_-1.pdf"
+                        style="color: inherit; text-decoration: none;">Источник</a></em>
+            </p>
+
+            Здесь особое внимание заслуживает правая часть графика, демонстрирующая, что остается значительное число
+            работников (36% в совокупности), которые работают сверх стандарта в 40 ч, еще установленного, напомню, в
+            начале 20 века. Особенно, конечно, опасно выделяется последний кубик: как мы помним, <a
+                href="https://www.ilo.org/sites/default/files/wcmsp5/groups/public/@ed_protect/@protrav/@safework/documents/publication/wcms_903140.pdf">переработка</a>
+            (свыше 55
+            часов) является ключевым фактором повышенной смертности от заболеваний, обусловленных работой. Как
+            отмечается в отчете, это наблюдается в
+            <blockquote>
+                «гостиничном и гостиничном бизнесе, рыболовстве и сельском хозяйстве,
+                пищевой промышленности, на транспорте, а также в машиностроении». <cite>– ILO</cite></blockquote>
+            В качестве пасхалки напомню, что в РФ последние годы тенденция, наоборот, восходящая, и среднее количество
+            рабочих часов составляет 38.5 ч (рисунок 3).
+
+            <img src="https://img1.teletype.in/files/80/03/8003e4b1-57f5-4329-93fd-07b25fb7aed1.png"
+                alt="Среднее количество рабочих часов в РФ"
+                style="display: block; margin: 0 auto; width: 80%; margin-top: 20px;">
+
+            <p style="font-size: 12px; color: #555;">
+                <em>Рисунок 3. <a href="https://finexpertiza.ru/press-service/researches/2023/dolgaya-pyatidnevka/"
+                        style="color: inherit; text-decoration: none;">Источник</a></em>
+            </p>
+
+            Возвращаемся к изподвыподвертам. Сокращение рабочей недели происходило по разным схемам, из которых сама
+            схема 4-дневной рабочей недели имела место только в 28% случаев. За ней идут:
+            <ul>
+                <li>гибкий график, согласованный с менеджером (22%);</li>
+                <li>более короткий рабочий день каждый день (19%); </li>
+                <li>на один день в месяц короче (10%); </li>
+                <li>короче на один целый день каждые две недели (6%);</li>
+                <li>меньшее количество смен в месяц (5%);</li>
+                <li>другое (11%). </li>
+            </ul>
+
+            Удовлетворенных/не удовлетворенных такой реформой оказалось пропорционально <b>62/38</b>.
+            Неудовлетворенность 38%
+            респондентов (большая цифра) вызывает интерес, однако исследователи упустили возможность узнать причины
+            и/или не представили таких данных.
+
+            <p></p>Далее в статье анализируется так называемое колесо баланса между работой и жизнью, а также
+            провоцируемые
+            работой усталость и стресс. Результаты совершенно неинформативны: как мы выяснили, схем сокращения рабочих
+            часов было несколько, уровень удовлетворенности реформой разрозненный, следовательно, этот обобщающий анализ
+            порождает только одни вопросы. Намного ценней были бы данные, показывающие зависимость, например, между
+            определенной схемой сокращения рабочего времени и уровнем удовлетворенности; между уровнем стресса и уровнем
+            удовлетворенности от реформы. Это дало бы ценные инсайты, в то время как представленные данные показывают
+            некоторую среднюю температуру по палате с плеядой неучтенных переменных – оттого и неудивительно, что сами
+            графики будто бы не согласованы между собой. Примерно то же самое можно сказать и по экономической выкладке,
+            хотя любопытно, что именно эти недоработанные данные в конечном итоге стали заголовками новостных изданий.
+
+            <!-- Врезка / примечание переводчика
+            <div class="art-note">
+                <strong>Примечание переводчика:</strong> В оригинальном тексте используется термин
+                «presenteeism» — присутствие на работе без реальной отдачи. Мы переводим его как
+                «имитация занятости».
+            </div> -->
+
+            <h2>Выводы</h2>
+
+            <p>
+                1. Проведенная реформа позволила снизить количество рабочих часов в неделю до отметки в 36.2 ч,
+                доведя их до среднеевропейского уровня, равного 36.1 ч.
+            </p>
+
+            <p>
+                2. Сокращение рабочей недели происходило по разным схемам, из которых сама схема 4-дневной рабочей
+                недели имела место только в 28% случаев. За ней идут: гибкий график, согласованный с менеджером (22%),
+                более короткий рабочий день каждый день (19%), на один день в месяц короче (10%), короче на один целый
+                день каждые две недели (6%), меньшее количество смен в месяц (5%), другое (11%).
+            </p>
+
+            <p>
+                3. Удовлетворенных/не удовлетворенных такой реформой оказалось пропорционально 62/38.
+                Неудовлетворенность 38% респондентов (большая цифра) вызывает интерес, однако исследователи упустили
+                возможность узнать причины и/или не представили таких данных.
+            </p>
+
+            <p>
+                4. Результаты по work-life balance, уровню усталости и стресса, а также экономические выкладки
+                совершенно неинформативны: представленные данные показывают некоторую среднюю температуру по палате с
+                плеядой неучтенных переменных – оттого и неудивительно, что сами графики будто бы не согласованы между
+                собой. Намного ценней были бы данные, показывающие зависимость, например, между определенной схемой
+                сокращения рабочего времени и уровнем удовлетворенности; между уровнем стресса и уровнем
+                удовлетворенности от реформы.
+            </p>
+
+
+        </article>
+        <!-- ══════════════════════════════════════════════════════════ -->
+
+
+        <!-- Ссылка на оригинал -->
+        <div class="source-box">
+            <p>
+                <strong>Оригинальный материал.</strong>
+
+                <!-- Это перевод. Если хочешь прочитать
+                источник на языке оригинала — ссылка ниже. -->
+            </p>
+            <!-- <a class="source-btn" href="#" target="_blank" rel="noopener">Читать оригинал →</a> -->
+        </div>
+
+
+        <!-- Похожие материалы -->
+        <section class="related-section">
+            <p class="related-label" style="margin-left: 10px;">Читать также</p>
+            <div class="related-grid">
+
+                <a class="rel-card" href="../science-progress/">
+                    <img class="rel-img"
+                        src="https://img2.teletype.in/files/59/91/5991b2cb-8867-4a04-a311-fb84b0ac8d33.png"
+                        alt="Научный прогресс замедляется?" loading="lazy">
+                    <div class="rel-body">
+                        <p class="rel-title">Научный прогресс замедляется?</p>
+                        <p class="rel-meta">Статья · май 2024</p>
+                    </div>
+                </a>
+
+                <a class="rel-card" href="../ilo-2024/">
+                    <img class="rel-img"
+                        src="https://img1.teletype.in/files/85/0b/850ba7a8-9970-4e2d-9dfd-e04380879a6c.png"
+                        alt="Всемирный обзор занятости МОТ" loading="lazy">
+                    <div class="rel-body">
+                        <p class="rel-title">Всемирный обзор занятости и социальной сферы</p>
+                        <p class="rel-meta">Доклад · сент. 2024</p>
+                    </div>
+                </a>
+
+                <!-- Добавить ещё карточку при необходимости -->
+
+            </div>
+        </section>
+
+    </div><!-- /article-wrap -->
+
+
+    <!-- ФУТЕР -->
+    <footer>
+        <div class="fi">
+            <div class="ft">
+                <div style="max-width: 640px; text-align: left;">
+                    <div class="fb-label">Новые книги и переводы</div>
+                    <h3>Не пропусти новые материалы</h3>
+                    <p1>Подписывайся на Telegram: свежие переводы, статьи и обсуждение антитруда.</p1>
+                </div>
+                <a href="https://t.me/antiwork_ru" target="_blank" rel="noopener" class="tg-btn">Подписаться →</a>
+            </div>
+            <div class="yt-row">
+                <span>Смотри меня на</span>
+                <a href="https://youtube.com/@kirill_spiney" target="_blank" rel="noopener" style="
+  color: #ff0000;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: -10px;
+">YouTube</a>
+            </div>
+            <div style="
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding-top: 16px;
+      color: #9ca3af;
+      font-size: 13px;
+    ">
+                <p style="margin: 0;">© 2026 антитруд.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="manifesto-strip" id="manifesto">РАБОТА НЕ ЖИЗНЬ</div>
+
+    <script>
+        const manifestos = [
+            "РАБОТА НЕ ЖИЗНЬ", "ОТКАЖИ НОРМАЛЬНОМУ", "ОТДЫХ НЕ НАГРАДА",
+            "ТЫ НЕ РЕСУРС", "ОТДЫХ – ЭТО СОПРОТИВЛЕНИЕ", "НИКТО НЕ ВЛАДЕЕТ ТВОИМ ВРЕМЕНЕМ",
+            "ПРИТОРМОЗИ СИСТЕМУ", "АНТИТРУД / ПРОЛАЙФ", "ТВОЯ ЦЕННОСТЬ НЕ ТВОИ РЕЗУЛЬТАТЫ",
+            "ЧЕЛОВЕК ВАЖНЕЕ РЫНКА", "УСТАЛОСТЬ – ПОЛИТИЧЕСКИЙ ВОПРОС",
+            "БАЗОВЫЙ ДОХОД – СВОБОДА СКАЗАТЬ НЕТ", "АВТОМАТИЗАЦИЯ ДОЛЖНА ОСВОБОЖДАТЬ",
+            "КУЛЬТ ЖИЗНИ", "РАБОТА МЕЧТЫ ВСЁ ЕЩЁ РАБОТА"
+        ];
+        document.getElementById("manifesto").textContent =
+            manifestos[Math.floor(Math.random() * manifestos.length)];
+    </script>
+
+</body>
+
+</html>

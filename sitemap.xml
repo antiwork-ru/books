@@ -133,4 +133,40 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://antiwork-ru.github.io/books/articles/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://antiwork-ru.github.io/books/articles/4day-iceland/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://antiwork-ru.github.io/books/articles/big-lie/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://antiwork-ru.github.io/books/articles/ilo-2024/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://antiwork-ru.github.io/books/articles/letter-to-citizens/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://antiwork-ru.github.io/books/articles/science-progress/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

@@ -1,0 +1,947 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <link rel="icon" type="image/png" href="../icons/favicon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Статьи и публикации — антитруд. переводы</title>
+    <meta name="description"
+        content="Статьи, эссе, доклады и подкасты об антитруде, критике работы, базовом доходе и посттрудовом обществе.">
+    <link rel="canonical" href="https://antiwork-ru.github.io/books/articles/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Статьи — антитруд. переводы">
+    <meta property="og:description"
+        content="Статьи, эссе, доклады и подкасты об антитруде, критике работы, базовом доходе.">
+    <meta property="og:url" content="https://antiwork-ru.github.io/books/articles/">
+    <meta property="og:image" content="https://antiwork-ru.github.io/books/icons/logo.jpg">
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            margin: 0;
+            background: #f6f7fb;
+            color: #111;
+        }
+
+        /* ── HEADER ── */
+        header {
+            background: #fff;
+            border-bottom: 1px solid #e6e9ef;
+            padding: 20px 0;
+        }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-red {
+            color: #ff0000;
+            font-weight: 700;
+        }
+
+        .brand-black {
+            color: #000000;
+            font-weight: 700;
+        }
+
+        .brand-sub {
+            color: #666;
+            font-weight: 600;
+            margin-left: -4px;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .tg-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .tg-link img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+        }
+
+        /* ── BREADCRUMB ── */
+        .breadcrumb {
+            max-width: 1100px;
+            margin: 20px auto 0;
+            padding: 0 16px;
+            font-size: 13px;
+            color: #999;
+        }
+
+        .breadcrumb a {
+            color: #999;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: #ff0000;
+        }
+
+        .breadcrumb span {
+            margin: 0 6px;
+        }
+
+        /* ── PAGE HERO ── */
+        .page-hero {
+            max-width: 1100px;
+            margin: 18px auto 32px;
+            padding: 0 16px;
+        }
+
+        .page-hero-inner {
+            background: #fff;
+            border-radius: 16px;
+            border: 1px solid #e6e9ef;
+            padding: 36px 36px 32px;
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 260px;
+            gap: 32px;
+            align-items: start;
+        }
+
+        @media (max-width: 720px) {
+            .page-hero-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats-panel {
+                display: none;
+            }
+        }
+
+        .page-hero-inner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #ff0000;
+            border-radius: 16px 0 0 16px;
+        }
+
+        .page-hero-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: #999;
+            margin: 0 0 10px;
+        }
+
+        .page-hero-title {
+            font-size: clamp(20px, 2.5vw, 28px);
+            font-weight: 800;
+            line-height: 1.2;
+            color: #111;
+            margin: 0 0 12px;
+        }
+
+        .page-hero-title em {
+            font-style: normal;
+            color: #ff0000;
+        }
+
+        .page-hero-sub {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.65;
+            margin: 0 0 22px;
+        }
+
+        /* ── GLOSSARY PANEL (правая колонка) ── */
+        .hero-stats-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            padding-top: 4px;
+        }
+
+        .gloss-panel {
+            background: #f6f7fb;
+            border: 1px solid #e6e9ef;
+            border-radius: 12px;
+            padding: 18px 20px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: 100%;
+        }
+
+        .gloss-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: #999;
+            margin: 0;
+        }
+
+        .gloss-term {
+            font-size: 17px;
+            font-weight: 800;
+            color: #111;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .gloss-term em {
+            font-style: normal;
+            color: #ff0000;
+        }
+
+        .gloss-orig {
+            font-size: 11px;
+            color: #bbb;
+            margin: -4px 0 0;
+            font-style: italic;
+        }
+
+        .gloss-def {
+            font-size: 13px;
+            color: #444;
+            line-height: 1.6;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .gloss-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid #e6e9ef;
+            padding-top: 10px;
+            margin-top: 4px;
+        }
+
+        .gloss-counter {
+            font-size: 11px;
+            color: #ccc;
+            font-weight: 600;
+        }
+
+        .gloss-btn {
+            background: none;
+            border: 1px solid #e0e0e0;
+            border-radius: 7px;
+            padding: 5px 12px;
+            font-size: 12px;
+            color: #888;
+            cursor: pointer;
+            font-family: inherit;
+            transition: border-color .15s, color .15s;
+        }
+
+        .gloss-btn:hover {
+            border-color: #aaa;
+            color: #333;
+        }
+
+        /* ── FILTER BAR ── */
+        .filter-bar {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 28px;
+        }
+
+        .filter-btn {
+            padding: 6px 16px;
+            border-radius: 99px;
+            border: 1px solid #e6e9ef;
+            background: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            color: #555;
+            cursor: pointer;
+            transition: background .15s, color .15s, border-color .15s;
+            font-family: inherit;
+        }
+
+        .filter-btn:hover {
+            border-color: #bbb;
+            color: #111;
+        }
+
+        .filter-btn.active {
+            background: #111;
+            color: #fff;
+            border-color: #111;
+        }
+
+        .filter-btn.active-red {
+            background: #ff0000;
+            color: #fff;
+            border-color: #ff0000;
+        }
+
+        /* ── MAIN GRID ── */
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 16px 60px;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 18px;
+        }
+
+        /* ── ARTICLE CARD ── */
+        .art-card {
+            background: #fff;
+            border: 1px solid #e8e8e8;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: box-shadow .18s, transform .18s;
+        }
+
+        .art-card:hover {
+            box-shadow: 0 8px 28px rgba(0, 0, 0, .10);
+            transform: translateY(-2px);
+        }
+
+        .art-img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            display: block;
+            background: #f0efe9;
+        }
+
+        .art-body {
+            padding: .9rem;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            flex: 1;
+        }
+
+        .art-meta {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .art-badge {
+            font-size: 10px;
+            padding: 2px 9px;
+            border-radius: 99px;
+            font-weight: 700;
+            letter-spacing: .03em;
+        }
+
+        .badge-a {
+            background: #E6F1FB;
+            color: #0C447C;
+        }
+
+        .badge-r {
+            background: #EAF3DE;
+            color: #27500A;
+        }
+
+        .badge-p {
+            background: #FAEEDA;
+            color: #633806;
+        }
+
+        .badge-l {
+            background: #EEEDFE;
+            color: #3C3489;
+        }
+
+        .badge-i {
+            background: #FFE8E8;
+            color: #8B0000;
+        }
+
+        .art-date {
+            font-size: 11px;
+            color: #999;
+        }
+
+        .art-src {
+            font-size: 11px;
+            color: #bbb;
+        }
+
+        .art-title {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.35;
+            color: #1a1a1a;
+            margin: 0;
+        }
+
+        .art-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .art-title a:hover {
+            color: #ff0000;
+        }
+
+        .art-desc {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.55;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .art-read {
+            display: inline-block;
+            margin-top: 6px;
+            font-size: 12px;
+            color: #2b7a55;
+            text-decoration: none;
+            border: 1px solid #b6ddc9;
+            border-radius: 6px;
+            padding: 5px 13px;
+            font-weight: 600;
+            transition: background .15s;
+        }
+
+        .art-read:hover {
+            background: #EAF3DE;
+        }
+
+        /* featured убран — все карточки одинаковые */
+
+        /* ── SECTION LABEL ── */
+        .section-label {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: #999;
+            margin: 36px 0 14px 2px;
+        }
+
+        /* ── EMPTY STATE ── */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #bbb;
+            font-size: 15px;
+            grid-column: 1 / -1;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: #fff;
+            border-top: 1px solid #e5e7eb;
+            padding: 40px 16px 24px;
+            font-family: system-ui, -apple-system, sans-serif;
+            color: #111827;
+        }
+
+        footer .fi {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        footer .ft {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #eef2f7;
+        }
+
+        footer .fb-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: #ff0000;
+            margin-bottom: 10px;
+            letter-spacing: .02em;
+            text-transform: uppercase;
+        }
+
+        footer h3 {
+            font-size: 24px;
+            line-height: 1.2;
+            margin: 0 0 10px;
+            color: #111827;
+        }
+
+        footer p1 {
+            margin: 0;
+            color: #6b7280;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .tg-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 20px;
+            border-radius: 12px;
+            background: #ff0000;
+            color: #fff;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            border: 1px solid #ff0000;
+            transition: background .2s, border-color .2s, transform .2s;
+        }
+
+        .tg-btn:hover {
+            background: #000;
+            border-color: #000;
+            transform: translateY(-1px);
+        }
+
+        .yt-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            padding: 18px 0 16px;
+            border-bottom: 1px solid #eef2f7;
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        .yt-row a {
+            color: #ff0000;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .copy {
+            padding-top: 16px;
+            color: #9ca3af;
+            font-size: 13px;
+        }
+
+        /* ── MANIFESTO STRIP ── */
+        .manifesto-strip {
+            position: fixed;
+            left: 18px;
+            bottom: 40px;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-size: 10px;
+            letter-spacing: .25em;
+            color: #c2c2c2;
+            text-transform: uppercase;
+            z-index: 50;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-inner">
+            <h1>
+                <a href="../" style="text-decoration:none;">
+                    <span class="brand-red">анти</span><span class="brand-black">труд.</span>
+                    <span class="brand-sub">переводы</span>
+                </a>
+            </h1>
+            <a class="tg-link" href="https://t.me/antiwork_ru" target="_blank" rel="noopener">
+                <img src="../icons/logo.jpg" alt="Telegram">
+            </a>
+        </div>
+    </header>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../">Главная</a>
+        <span>›</span>
+        <span>Статьи и публикации</span>
+    </nav>
+
+    <div class="page-hero">
+        <div class="page-hero-inner">
+
+            <!-- ЛЕВАЯ КОЛОНКА: заголовок + фильтры -->
+            <div>
+                <p class="page-hero-label">Статьи и публикации</p>
+                <h2 class="page-hero-title">Тексты об <em>антитруде</em> —<br>и не только</h2>
+                <p class="page-hero-sub">
+                    Здесь собраны переводы статей, эссе, докладов и других коротких текстов, а также оригинальные статьи
+                    о критике труда, посттрудовом обществе, базовом доходе, автоматизации и прочих вопросах.</p>
+
+                <div class="filter-bar" id="filters">
+                    <button class="filter-btn active-red" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="a">Статьи</button>
+                    <button class="filter-btn" data-filter="r">Доклады</button>
+                    <button class="filter-btn" data-filter="p">Подкасты</button>
+                    <button class="filter-btn" data-filter="l">Письма</button>
+                    <button class="filter-btn" data-filter="i">Интервью</button>
+                </div>
+            </div>
+
+            <!-- ПРАВАЯ КОЛОНКА: глоссарий -->
+            <div class="hero-stats-panel">
+                <div class="gloss-panel">
+                    <p class="gloss-label">Глоссарий</p>
+                    <p class="gloss-term" id="g-term"></p>
+                    <p class="gloss-orig" id="g-orig"></p>
+                    <p class="gloss-def" id="g-def"></p>
+                    <div class="gloss-footer">
+                        <span class="gloss-counter" id="g-counter"></span>
+                        <button class="gloss-btn" onclick="glossNext()">↻ другой термин</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <main>
+        <p class="section-label">Все материалы</p>
+        <div class="articles-grid" id="articles-grid"></div>
+    </main>
+
+    <!-- ФУТЕР -->
+    <footer>
+        <div class="fi">
+            <div class="ft">
+                <div style="max-width: 640px; text-align: left;">
+                    <div class="fb-label">Новые книги и переводы</div>
+                    <h3>Не пропусти новые материалы</h3>
+                    <p1>Подписывайся на Telegram: свежие переводы, статьи и обсуждение антитруда.</p1>
+                </div>
+                <a href="https://t.me/antiwork_ru" target="_blank" rel="noopener" class="tg-btn">Подписаться →</a>
+            </div>
+            <div class="yt-row">
+                <span>Смотри меня на</span>
+                <a href="https://youtube.com/@kirill_spiney" target="_blank" rel="noopener" style="
+  color: #ff0000;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: -10px;
+">YouTube</a>
+            </div>
+            <div style="
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding-top: 16px;
+      color: #9ca3af;
+      font-size: 13px;
+    ">
+                <p style="margin: 0;">© 2026 антитруд.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="manifesto-strip" id="manifesto">РАБОТА НЕ ЖИЗНЬ</div>
+
+    <script>
+        /* ── ДАННЫЕ СТАТЕЙ ── */
+        const ARTICLES = [
+            {
+                t: "Всемирный обзор занятости и социальной сферы: обновление за сентябрь 2024",
+                src: "МОТ",
+                tp: "r",
+                tl: "Доклад",
+                dt: "сент. 2024",
+                ds: "Анализ глобальных тенденций: доля трудовых доходов, занятость молодёжи и прогресс в достижении ЦУР к 2030 году.",
+                img: "https://img1.teletype.in/files/85/0b/850ba7a8-9970-4e2d-9dfd-e04380879a6c.png",
+                url: "https://antiwork-ru.github.io/books/articles/ilo-2024/",
+            },
+            {
+                t: "Большая ложь (с Эрин Пицци)",
+                src: "TheTinMen",
+                tp: "p",
+                tl: "Подкаст",
+                dt: "нояб. 2024",
+                ds: "Гендерные причины домашнего насилия: разговор с Эрин Пицци — основательницей одного из первых приютов для жертв насилия.",
+                img: "https://img1.teletype.in/files/08/d1/08d1b778-a43d-4db1-8e63-af7e3c89780f.png",
+                url: "https://antiwork-ru.github.io/books/articles/big-lie/",
+            },
+            {
+                t: "Письмо нашим согражданам Земли",
+                src: "Открытое письмо",
+                tp: "l",
+                tl: "Письмо",
+                dt: "дек. 2024",
+                ds: "Обращение международных исследователей: экологический кризис, неравенство и призыв к коллективным действиям.",
+                img: "https://img2.teletype.in/files/9f/d3/9fd38f69-958f-47f5-8128-995d3c06ebb3.png",
+                url: "https://antiwork-ru.github.io/books/articles/letter-to-citizens/",
+            },
+            {
+                t: "Научный прогресс замедляется?",
+                src: "Оригинальная статья",
+                tp: "a",
+                tl: "Статья",
+                dt: "май 2024",
+                ds: "Почему наука при всём росте числа публикаций продвигается вперёд всё медленнее.",
+                img: "https://img2.teletype.in/files/59/91/5991b2cb-8867-4a04-a311-fb84b0ac8d33.png",
+                url: "https://antiwork-ru.github.io/books/articles/science-progress/",
+            },
+            {
+                t: "Результаты внедрения 4-дневной рабочей недели в Исландии",
+                src: "Оригинальная статья",
+                tp: "a",
+                tl: "Статья",
+                dt: "окт. 2024",
+                ds: "Данные и выводы крупнейшего эксперимента по сокращению рабочей недели.",
+                img: "https://img2.teletype.in/files/18/c1/18c1b3eb-532c-4402-bdb1-652df0a675e4.png",
+                url: "https://antiwork-ru.github.io/books/articles/4day-iceland/",
+            },
+            /* ── НОВЫЕ СТАТЬИ СЮДА ─────────────────────────────────────
+               Поля:
+                 t   — заголовок
+                 src — источник / автор
+                 tp  — тип: "a" статья | "r" доклад | "p" подкаст | "l" письмо | "i" интервью
+                 tl  — подпись типа (отображается в бейдже)
+                 dt  — дата, например "янв. 2025"
+                 ds  — краткое описание (1–2 предложения)
+                 img — URL обложки (соотношение 16:9)
+                 url — ссылка на полный текст
+            ──────────────────────────────────────────────────────────────────── */
+        ];
+
+        /* ── ГЛОССАРИЙ ── */
+        const GLOSSARY = [
+            {
+                term: "Антитруд",
+                orig: "Antiwork",
+                def: "Идейное течение, критикующее наёмный труд как центральную ценность жизни. Не отрицает деятельность как таковую, но ставит под сомнение принуждение к работе ради выживания и культ продуктивности."
+            },
+            {
+                term: "Выгорание",
+                orig: "Burnout",
+                def: "Состояние хронического стресса, ведущее к физическому и эмоциональному истощению. Рассматривается антитрудовой теорией не как личная слабость, а как структурный результат капиталистической организации труда."
+            },
+            {
+                term: "Базовый доход",
+                orig: "Universal Basic Income (UBI)",
+                def: "Регулярная безусловная выплата всем гражданам вне зависимости от занятости. Рассматривается как инструмент освобождения от принудительного труда и расширения свободы выбора."
+            },
+            {
+                term: "Посттрудовое общество",
+                orig: "Post-work society",
+                def: "Концепция общественного устройства, в котором наёмный труд перестаёт быть главным источником дохода, идентичности и социального статуса."
+            },
+            {
+                term: "Культ продуктивности",
+                orig: "Productivity cult / Hustle culture",
+                def: "Система ценностей, отождествляющая человеческую значимость с объёмом выполненной работы. Критикуется как механизм самоэксплуатации, встроенный в массовую культуру."
+            },
+            {
+                term: "Прекариат",
+                orig: "Precariat",
+                def: "Класс людей, живущих в условиях хронической трудовой нестабильности: без постоянной занятости, социальных гарантий и предсказуемого дохода. Термин введён социологом Гаем Стэндингом."
+            },
+            {
+                term: "Невидимый труд",
+                orig: "Invisible / Unpaid labour",
+                def: "Работа, которая не оплачивается и не признаётся экономически: уход за детьми, домашний труд, эмоциональная поддержка. Исторически возлагается преимущественно на женщин."
+            },
+            {
+                term: "Автоматизация",
+                orig: "Automation",
+                def: "Замена человеческого труда машинами и алгоритмами. В антитрудовой перспективе – потенциальный инструмент освобождения, если плоды автоматизации распределяются справедливо, а не концентрируются в руках капитала."
+            },
+            {
+                term: "Праздность",
+                orig: "Idleness / Leisure",
+                def: "В традиционной этике – порок. В антитрудовой теории – право и форма сопротивления. Поль Лафарг в «Праве на лень» (1883) утверждал, что освобождение рабочего класса начинается с отказа от трудоголизма."
+            },
+            {
+                term: "Отчуждение труда",
+                orig: "Alienation of labour",
+                def: "Марксистский концепт: рабочий отчуждён от продукта своего труда, от процесса, от других людей и от собственной сущности. Наёмный труд превращает человека в средство, а не в цель."
+            },
+            {
+                term: "Работа мечты",
+                orig: "Dream job",
+                def: "Идеологический концепт, внушающий, что правильная работа сделает человека счастливым. Критикуется как способ переложить ответственность за системные проблемы труда на самого работника."
+            },
+            {
+                term: "Медленная жизнь",
+                orig: "Slow living",
+                def: "Практика сознательного замедления темпа жизни вопреки требованиям продуктивности. Связана с движениями дероста и дауншифтинга."
+            },
+            {
+                term: "Имитация занятости / Презентеизм",
+                orig: "Presenteeism",
+                def: "Присутствие на работе без реальной отдачи. Дэвид Гребер описал целый класс «бредовых работ» – должностей, которые сами работники считают бессмысленными, но которые воспроизводятся системой."
+            },
+            {
+                term: "Право на лень",
+                orig: "The Right to Be Lazy",
+                def: "Памфлет Поля Лафарга (1883), зятя Карла Маркса. Один из первых манифестов против культа труда: автор утверждал, что рабочий класс должен требовать не восьмичасового, а трёхчасового рабочего дня."
+            },
+            {
+                term: "Дауншифтинг",
+                orig: "Downshifting",
+                def: "Добровольный переход к менее интенсивной и менее оплачиваемой работе ради качества жизни. Рассматривается как индивидуальная стратегия выхода из культуры сверхпотребления и сверхзанятости."
+            },
+            {
+                term: "Микротирания",
+                orig: "Microtyranny",
+                def: "Локальные, едва заметные, часто алгоритмические формы доминирования, встроенные в повседневные взаимодействия: системы рейтингов, поощрения, скрытые санкции."
+
+            },
+
+            {
+                term: "Малэмплоймент",
+                orig: "Malemployment",
+                def: "Занятость, при которой квалификация работника превышает требования выполняемой работы."
+
+            },
+            {
+                term: "Зарплатное рабство",
+                orig: "Wage slavary",
+                def: "Формальная свобода труда при фактической зависимости человека от зарплаты для существования."
+
+            },
+
+            {
+                term: "Святой понедельник",
+                orig: "Saint Monday",
+                def: "Традиционный выходной среди работников до индустриальной революции."
+
+            },
+
+            {
+                term: "Хронополитика",
+                orig: "Chronopolitics",
+                def: "Способы осуществления власти через формирование, контроль и восприятие времени."
+
+            },
+
+            {
+                term: "Макиладора",
+                orig: "Maquiladora",
+                def: "Модель предприятия, при которой иностранная компания использует дешевую рабочую силу в другой стране для снижения себестоимости."
+
+            },
+
+        ];
+
+        let glossIdx = Math.floor(Math.random() * GLOSSARY.length);
+
+        function glossShow() {
+            const g = GLOSSARY[glossIdx];
+            document.getElementById("g-term").innerHTML = g.term;
+            document.getElementById("g-orig").textContent = g.orig;
+            document.getElementById("g-def").textContent = g.def;
+            document.getElementById("g-counter").textContent =
+                (glossIdx + 1) + " / " + GLOSSARY.length;
+        }
+
+        window.glossNext = function () {
+            glossIdx = (glossIdx + 1) % GLOSSARY.length;
+            glossShow();
+        };
+
+        glossShow();
+
+        /* ── РЕНДЕР КАРТОЧЕК ── */
+        function badgeClass(tp) {
+            return { a: "badge-a", r: "badge-r", p: "badge-p", l: "badge-l", i: "badge-i" }[tp] || "badge-a";
+        }
+
+        function renderCard(a) {
+            return `
+      <article class="art-card" data-type="${a.tp}">
+        <a href="${a.url}" target="_blank" rel="noopener">
+          <img class="art-img" src="${a.img}" alt="${a.t}" loading="lazy">
+        </a>
+        <div class="art-body">
+          <div class="art-meta">
+            <span class="art-badge ${badgeClass(a.tp)}">${a.tl}</span>
+            <span class="art-date">${a.dt}</span>
+            <span class="art-src">· ${a.src}</span>
+          </div>
+          <p class="art-title"><a href="${a.url}" target="_blank" rel="noopener">${a.t}</a></p>
+          <p class="art-desc">${a.ds}</p>
+          <a class="art-read" href="${a.url}" target="_blank" rel="noopener">Читать →</a>
+        </div>
+      </article>`;
+        }
+
+        function render(filter) {
+            const grid = document.getElementById("articles-grid");
+            const items = filter === "all" ? ARTICLES : ARTICLES.filter(a => a.tp === filter);
+            if (items.length === 0) {
+                grid.innerHTML = `<div class="empty-state">Материалов по этой категории пока нет.</div>`;
+            } else {
+                grid.innerHTML = items.map(renderCard).join("");
+            }
+        }
+
+        /* ── ФИЛЬТРАЦИЯ ── */
+        function filterBy(tp) {
+            document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active", "active-red"));
+            const btn = document.querySelector(`.filter-btn[data-filter="${tp}"]`);
+            if (btn) btn.classList.add("active-red");
+            render(tp);
+        }
+
+        document.querySelectorAll(".filter-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active", "active-red"));
+                btn.classList.add("active-red");
+                render(btn.dataset.filter);
+            });
+        });
+
+        glossShow();
+        render("all");
+
+        /* ── МАНИФЕСТ ── */
+        const manifestos = [
+            "РАБОТА НЕ ЖИЗНЬ", "ОТКАЖИ НОРМАЛЬНОМУ", "ОТДЫХ НЕ НАГРАДА",
+            "ТЫ НЕ РЕСУРС", "ОТДЫХ – ЭТО СОПРОТИВЛЕНИЕ", "НИКТО НЕ ВЛАДЕЕТ ТВОИМ ВРЕМЕНЕМ",
+            "ПРИТОРМОЗИ СИСТЕМУ", "АНТИТРУД / ПРОЛАЙФ", "ТВОЯ ЦЕННОСТЬ НЕ ТВОИ РЕЗУЛЬТАТЫ",
+            "ЧЕЛОВЕК ВАЖНЕЕ РЫНКА", "УСТАЛОСТЬ – ПОЛИТИЧЕСКИЙ ВОПРОС",
+            "БАЗОВЫЙ ДОХОД – СВОБОДА СКАЗАТЬ НЕТ", "АВТОМАТИЗАЦИЯ ДОЛЖНА ОСВОБОЖДАТЬ",
+            "КУЛЬТ ЖИЗНИ", "РАБОТА МЕЧТЫ ВСЁ ЕЩЁ РАБОТА"
+        ];
+        document.getElementById("manifesto").textContent =
+            manifestos[Math.floor(Math.random() * manifestos.length)];
+    </script>
+
+</body>
+
+</html>
