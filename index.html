@@ -374,7 +374,7 @@
 
       .hero-cta-primary {
         display: inline-block;
-        background: #0b63ff;
+        background: #ff0000;
         color: #fff;
         font-weight: 700;
         font-size: 14px;
@@ -384,7 +384,7 @@
       }
 
       .hero-cta-primary:hover {
-        background: #0952d9;
+        background: #000000;
       }
 
       .hero-cta-secondary {
@@ -523,7 +523,7 @@
             <div style="font-size: 12px; color: #999; margin-top: 2px;">Люк Кемп · май 2026 · в процессе</div>
           </div>
           <a href="https://antiwork-ru.github.io/books/luke-kemp-goliath"
-            style="font-size: 12px; color: #0b63ff; text-decoration: none; font-weight: 600; white-space: nowrap;">Читать
+            style="font-size: 12px; color: #ff0000; text-decoration: none; font-weight: 600; white-space: nowrap;">Читать
             →</a>
         </div>
       </div>
@@ -601,7 +601,7 @@
       .start-num {
         font-size: 11px;
         font-weight: 700;
-        color: #0b63ff;
+        color: #ff0000;
         letter-spacing: 0.08em;
         text-transform: uppercase;
       }
@@ -630,7 +630,7 @@
 
       .start-arrow {
         font-size: 12px;
-        color: #0b63ff;
+        color: #ff0000;
         font-weight: 600;
         margin-top: 4px;
       }
@@ -700,7 +700,7 @@
       }
 
       .w-stat {
-        background: #f5f4f0;
+        background: #ffffff;
         border-radius: 8px;
         padding: .6rem 1rem;
         flex: 1;
@@ -773,16 +773,16 @@
         font-size: 12px;
         cursor: pointer;
         border: 1px solid #ddd;
-        background: #f5f4f0;
+        background: #ffffff;
         color: #555;
         font-family: inherit;
         transition: all .15s
       }
 
       .w-tag.on {
-        background: #EEEDFE;
-        border-color: #7F77DD;
-        color: #3C3489
+        background: #feeded;
+        border-color: #dd7777;
+        color: #893434
       }
 
       .w-grid {
@@ -911,16 +911,16 @@
 
       .w-links a {
         font-size: 11px;
-        color: #3C3489;
+        color: #893434;
         text-decoration: none;
-        border: 1px solid #ccc9f0;
+        border: 1px solid #f0c9c9;
         border-radius: 5px;
         padding: 3px 9px;
         transition: background .12s
       }
 
       .w-links a:hover {
-        background: #EEEDFE
+        background: #feeded
       }
 
       .w-links a.tt {
@@ -1019,7 +1019,22 @@
             return mQ && mS && mT;
           });
           const g = document.getElementById("wgrid");
-          if (!f.length) { g.innerHTML = '<p class="w-empty">Ничего не найдено — попробуйте изменить фильтры</p>'; return; }
+          if (!f.length) {
+            g.innerHTML = `<p class="w-empty">Ничего не найдено – попробуйте изменить фильтры</p>`;
+
+            const done = books.filter(b => b.status === "done").length,
+              wip = books.filter(b => b.status === "wip").length,
+              edit = books.filter(b => b.status === "edit").length;
+
+            document.getElementById("ws").innerHTML = `
+    <div class="w-stat"><div class="n">${books.length}</div><div class="l">всего книг</div></div>
+    <div class="w-stat"><div class="n">${done}</div><div class="l">готово</div></div>
+    <div class="w-stat"><div class="n">${wip + edit}</div><div class="l">в работе</div></div>
+    <div class="w-stat"><div class="n">0</div><div class="l">показано</div></div>
+  `;
+
+            return;
+          }
           g.innerHTML = f.map(b => {
             const coverHtml = b.cover
               ? `<img class="w-cover" src="${BASE}${b.cover}" alt="${b.ru}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="w-cover-ph" style="display:none">📖</div>`
@@ -1268,7 +1283,7 @@
         text-decoration: none;
         border: 1px solid #ff0000;
         transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-      " onmouseover="this.style.background='#084fcb'; this.style.borderColor='#084fcb'; this.style.transform='translateY(-1px)';"
+      " onmouseover="this.style.background='#000000'; this.style.borderColor='#000000'; this.style.transform='translateY(-1px)';"
           onmouseout="this.style.background='#ff0000'; this.style.borderColor='#ff0000'; this.style.transform='translateY(0)';">
           Подписаться →
         </a>
@@ -1284,7 +1299,7 @@
       color: #9ca3af;
       font-size: 13px;
     ">
-        <p style="margin: 0;">© антитруд. 2026.
+        <p style="margin: 0;">© 2026 антитруд.
         </p>
         <a href="https://t.me/antiwork_ru" target="_blank" rel="noopener" style="
         color: #6b7280;
