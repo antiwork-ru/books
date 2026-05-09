@@ -269,15 +269,6 @@
         align-items: stretch;
       }
 
-      @media (max-width: 720px) {
-        .hero-row {
-          grid-template-columns: 1fr;
-          width: 105%;
-        }
-      }
-
-
-
       .hero {
         background: #fff;
         border-radius: 16px;
@@ -321,6 +312,18 @@
         font-style: normal;
         color: #ff0000;
       }
+
+      @media (max-width: 720px) {
+        .hero-row {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-headline {
+          font-size: 19px;
+
+        }
+      }
+
 
       .hero-sub {
         font-size: 15px;
@@ -569,12 +572,6 @@
         gap: 16px;
       }
 
-      @media (max-width: 720px) {
-        .start-grid {
-          grid-template-columns: 1fr;
-          width: 105%;
-        }
-      }
 
       .start-card {
         background: #fff;
@@ -942,7 +939,6 @@
           /* Делаем карточки еще компактнее (например, 2 в ряд) */
           grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
           gap: 10px;
-          width: 105%;
           /* Уменьшаем отступы между карточками */
         }
 
