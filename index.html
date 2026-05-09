@@ -318,12 +318,18 @@
           grid-template-columns: 1fr;
         }
 
-        .hero-headline {
-          font-size: 19px;
+        .hero {
+          padding: 30px 20px;
+          /* Уменьшаем поля по бокам, чтобы текст влез */
+        }
 
+        .hero-headline {
+          font-size: 19px !important;
+          /* Делаем заголовок компактнее */
+          line-height: 1.3 !important;
+          max-width: 100%;
         }
       }
-
 
       .hero-sub {
         font-size: 15px;
