@@ -104,6 +104,7 @@
     section h2 {
       font-size: 18px;
       margin-bottom: 18px;
+      margin-left: 5px;
     }
 
     .grid {
@@ -271,8 +272,11 @@
       @media (max-width: 720px) {
         .hero-row {
           grid-template-columns: 1fr;
+          width: 105%;
         }
       }
+
+
 
       .hero {
         background: #fff;
@@ -565,6 +569,13 @@
         gap: 16px;
       }
 
+      @media (max-width: 720px) {
+        .start-grid {
+          grid-template-columns: 1fr;
+          width: 105%;
+        }
+      }
+
       .start-card {
         background: #fff;
         border-radius: 12px;
@@ -627,6 +638,7 @@
         margin-bottom: 12px;
         margin-top: -10px;
         line-height: 1.5;
+        margin-left: 5px;
       }
     </style>
 
@@ -923,6 +935,26 @@
         color: #888;
         font-size: 14px;
         grid-column: 1/-1
+      }
+
+      @media (max-width: 720px) {
+        .w-grid {
+          /* Делаем карточки еще компактнее (например, 2 в ряд) */
+          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+          gap: 10px;
+          width: 105%;
+          /* Уменьшаем отступы между карточками */
+        }
+
+        .w-card {
+          border-radius: 8px;
+          /* Уменьшаем скругление на мелких карточках */
+        }
+
+        .w-title {
+          font-size: 12px;
+          /* Чуть уменьшаем шрифт заголовка */
+        }
       }
     </style>
 
