@@ -884,7 +884,7 @@
         function renderCard(a) {
             return `
       <article class="art-card" data-type="${a.tp}">
-        <a href="${a.url}" target="_blank" rel="noopener">
+        <a href="${a.url}"  rel="noopener">
           <img class="art-img" src="${a.img}" alt="${a.t}" loading="lazy">
         </a>
         <div class="art-body">
@@ -893,9 +893,9 @@
             <span class="art-date">${a.dt}</span>
             <span class="art-src">· ${a.src}</span>
           </div>
-          <p class="art-title"><a href="${a.url}" target="_blank" rel="noopener">${a.t}</a></p>
+          <p class="art-title"><a href="${a.url}"  rel="noopener">${a.t}</a></p>
           <p class="art-desc">${a.ds}</p>
-          <a class="art-read" href="${a.url}" target="_blank" rel="noopener">Читать →</a>
+          <a class="art-read" href="${a.url}"  rel="noopener">Читать →</a>
         </div>
       </article>`;
         }
